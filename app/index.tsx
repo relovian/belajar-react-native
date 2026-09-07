@@ -8,7 +8,7 @@ import LoopScreen from './materi dasar/loop.jsx';
 import ArrayScreen from './materi dasar/array.jsx';
 import FungsiScreen from './materi dasar/fungsi.jsx';
 import ButtonKustom from './materi component/ButtonKustom.jsx';
-import CustomImage from './materi component/CustomImage.jsx';
+import IndexImage from './materi component/CustomImage.jsx';
 import IndikatorKoneksi from './materi component/IndikatorKoneksi.jsx';
 import Katalog from './materi component/Katalog.jsx';
 import LearningPage from './materi component/LearningPage.jsx';
@@ -17,7 +17,6 @@ import PrivacyPolite from './materi component/PrivacyPolite.jsx';
 import StudentDashboard from './materi component/StudentDashboard.jsx';
 import UserCard from './materi component/UserCard.jsx';
 import ThemeSettings from './materi component/ThemeSettings.jsx';
-import StudentDasboard from './materi component/StudentDashboard.jsx';
 
 
 export default function Index() {
@@ -65,7 +64,7 @@ export default function Index() {
             <IndikatorKoneksi></IndikatorKoneksi>
 
             {/* Soal 7 */}
-            <CustomImage></CustomImage>
+            <IndexImage></IndexImage>
 
             {/* Soal 8*/}
             <StudentDashboard></StudentDashboard>

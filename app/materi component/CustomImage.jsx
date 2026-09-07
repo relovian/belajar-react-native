@@ -29,7 +29,7 @@ const CustomImage = ({ source, style }) => {
   );
 };
 
-export default function CustomImage() {
+export default function IndexImage() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Galeri Kegiatan Sekolah</Text>
