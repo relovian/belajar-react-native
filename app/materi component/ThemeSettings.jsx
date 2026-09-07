@@ -8,10 +8,8 @@ import {
 } from 'react-native';
 
 export default function ThemeSettings() {
-  // State untuk menyimpan opsi mode yang sedang dipilih
   const [selectedMode, setSelectedMode] = useState('Light Mode');
 
-  // Daftar opsi mode yang tersedia
   const modes = ['Light Mode', 'Dark Mode', 'System Default'];
 
   return (
@@ -47,8 +45,6 @@ export default function ThemeSettings() {
     </SafeAreaView>
   );
 }
-
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -79,11 +75,11 @@ const styles = StyleSheet.create({
     marginVertical: 6,
     alignItems: 'center',
   },
-  // Warna latar belakang jika opsi dipilih (aktif)
+ 
   activeButton: {
     backgroundColor: '#007AFF',
   },
-  // Warna latar belakang jika opsi tidak dipilih
+  
   inactiveButton: {
     backgroundColor: '#f0f2f5',
   },

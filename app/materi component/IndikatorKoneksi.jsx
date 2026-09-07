@@ -8,18 +8,16 @@ import {
   Alert 
 } from 'react-native';
 
-// 1. Membuat Komponen Reusable MyButton
 const MyButton = ({ title, onPress, variant = 'primary' }) => {
-  // Fungsi untuk menentukan warna background berdasarkan varian
   const getBackgroundColor = () => {
     switch (variant) {
       case 'success':
-        return '#2e7d32'; // Hijau
+        return '#2e7d32'; 
       case 'danger':
-        return '#c62828'; // Merah
+        return '#c62828'; 
       case 'primary':
       default:
-        return '#007AFF'; // Biru
+        return '#007AFF'; 
     }
   };
 
@@ -28,7 +26,7 @@ const MyButton = ({ title, onPress, variant = 'primary' }) => {
       style={({ pressed }) => [
         styles.button,
         { backgroundColor: getBackgroundColor() },
-        { opacity: pressed ? 0.7 : 1.0 } // Efek umpan balik saat ditekan
+        { opacity: pressed ? 0.7 : 1.0 } 
       ]}
       onPress={onPress}
     >
@@ -37,27 +35,23 @@ const MyButton = ({ title, onPress, variant = 'primary' }) => {
   );
 };
 
-// 2. Komponen Utama (Layar Utama)
-export default function App() {
+export default function IndikatorKoneksi() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Demonstrasi Tombol Varian</Text>
 
-      {/* Tombol Varian Primary (Biru) */}
       <MyButton 
         title="Tombol Primary" 
         variant="primary" 
         onPress={() => Alert.alert('Informasi', 'Tombol Primary ditekan!')} 
       />
 
-      {/* Tombol Varian Success (Hijau) */}
       <MyButton 
         title="Tombol Success" 
         variant="success" 
         onPress={() => Alert.alert('Informasi', 'Tombol Success ditekan!')} 
       />
 
-      {/* Tombol Varian Danger (Merah) */}
       <MyButton 
         title="Tombol Danger" 
         variant="danger" 
@@ -67,7 +61,6 @@ export default function App() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 export default function PrivacyPolicy() {
-  // State untuk melacak status saklar persetujuan (true / false)
   const [agreed, setAgreed] = useState(false);
 
   const handleSubmit = () => {
@@ -37,13 +36,12 @@ export default function PrivacyPolicy() {
           />
         </View>
 
-        {/* Tombol Submit / Lanjutkan */}
         <TouchableOpacity
           style={[
             styles.submitButton,
-            { backgroundColor: agreed ? '#007AFF' : '#d1d5db' } // Tombol abu-abu jika belum setuju
+            { backgroundColor: agreed ? '#007AFF' : '#d1d5db' } 
           ]}
-          disabled={!agreed} // Tombol dinonaktifkan jika belum disetujui
+          disabled={!agreed}
           onPress={handleSubmit}
           activeOpacity={0.8}
         >
@@ -54,7 +52,6 @@ export default function PrivacyPolicy() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,

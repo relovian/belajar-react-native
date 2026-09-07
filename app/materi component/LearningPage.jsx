@@ -8,17 +8,14 @@ import {
 } from 'react-native';
 
 export default function LearningPage() {
-  // Data dummy untuk kategori materi
   const categories = ['Semua', 'React Native', 'JavaScript', 'UI/UX Design', 'Backend', 'Database'];
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* ScrollView Vertikal Utama untuk Seluruh Konten Halaman */}
       <ScrollView contentContainerStyle={styles.scrollVerticalContainer} showsVerticalScrollIndicator={false}>
         
         <Text style={styles.pageTitle}>Modul Pembelajaran</Text>
 
-        {/* 1. ScrollView Horizontal untuk Daftar Kategori di Bagian Atas */}
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Kategori Materi</Text>
           <ScrollView 
@@ -34,7 +31,6 @@ export default function LearningPage() {
           </ScrollView>
         </View>
 
-        {/* 2. Artikel Lengkap di Bagian Bawah (Scroll Vertikal) */}
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Artikel Pilihan</Text>
           
@@ -65,7 +61,6 @@ export default function LearningPage() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,

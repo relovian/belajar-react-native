@@ -7,7 +7,6 @@ import {
   SafeAreaView 
 } from 'react-native';
 
-// Data dummy yang terkelompok berdasarkan kategori (sections)
 const studentData = [
   {
     title: 'Mata Pelajaran Kejuruan',
@@ -32,12 +31,10 @@ export default function StudentDashboard() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.headerTitle}>Dashboard Nilai Siswa</Text>
 
-      {/* Implementasi SectionList */}
       <SectionList
         sections={studentData}
         keyExtractor={(item) => item.id}
         
-        // Render untuk item per baris di dalam kategori
         renderItem={({ item }) => (
           <View style={styles.itemCard}>
             <Text style={styles.subjectText}>{item.subject}</Text>
@@ -45,7 +42,6 @@ export default function StudentDashboard() {
           </View>
         )}
         
-        // Render untuk judul kategori (section header)
         renderSectionHeader={({ section: { title } }) => (
           <Text style={styles.sectionHeader}>{title}</Text>
         )}

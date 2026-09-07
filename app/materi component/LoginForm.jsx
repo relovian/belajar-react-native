@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 export default function LoginForm() {
-  // State untuk menyimpan input email dan password
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -23,7 +23,6 @@ export default function LoginForm() {
       <View style={styles.formContainer}>
         <Text style={styles.title}>Silakan Login</Text>
 
-        {/* Input Email */}
         <TextInput
           style={styles.input}
           placeholder="Masukkan email"
@@ -34,7 +33,6 @@ export default function LoginForm() {
           onChangeText={setEmail}
         />
 
-        {/* Input Password (Teks Tersembunyi) */}
         <TextInput
           style={styles.input}
           placeholder="Masukkan password"
@@ -44,11 +42,10 @@ export default function LoginForm() {
           onChangeText={setPassword}
         />
 
-        {/* Tombol Login Kustom menggunakan Pressable */}
         <Pressable
           style={({ pressed }) => [
             styles.button,
-            { opacity: pressed ? 0.6 : 1.0 } // Efek umpan balik saat ditekan (opasitas berkurang)
+            { opacity: pressed ? 0.6 : 1.0 } 
           ]}
           onPress={handleLogin}
         >
@@ -59,7 +56,6 @@ export default function LoginForm() {
   );
 }
 
-// Styling Sederhana
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -8,7 +8,6 @@ import {
   Image 
 } from 'react-native';
 
-// Data dummy produk (sebanyak 50 item)
 const productsData = Array.from({ length: 50 }, (_, index) => ({
   id: (index + 1).toString(),
   name: `Produk Sekolah ${index + 1}`,
@@ -16,8 +15,7 @@ const productsData = Array.from({ length: 50 }, (_, index) => ({
   imageUrl: `https://picsum.photos/id/${(index % 30) + 10}/200/200`,
 }));
 
-export default function ProductCatalog() {
-  // Fungsi untuk merender tiap item dalam FlatList
+export default function Katalog() {
   const renderItem = ({ item }) => (
     <View style={styles.card}>
       <Image source={{ uri: item.imageUrl }} style={styles.productImage} />
@@ -32,7 +30,6 @@ export default function ProductCatalog() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.headerTitle}>Katalog Produk Toko Online</Text>
 
-      {/* Implementasi FlatList */}
       <FlatList
         data={productsData}
         renderItem={renderItem}
@@ -43,7 +40,6 @@ export default function ProductCatalog() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,

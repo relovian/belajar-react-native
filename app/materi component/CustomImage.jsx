@@ -8,7 +8,6 @@ import {
   SafeAreaView 
 } from 'react-native';
 
-// 1. Membuat Komponen Reusable CustomImage
 const CustomImage = ({ source, style }) => {
   const [loading, setLoading] = useState(false);
 
@@ -21,7 +20,6 @@ const CustomImage = ({ source, style }) => {
         onLoadEnd={() => setLoading(false)}
       />
       
-      {/* Indikator placeholder muncul saat gambar sedang dimuat */}
       {loading && (
         <View style={styles.loaderContainer}>
           <ActivityIndicator size="small" color="#007AFF" />
@@ -31,14 +29,12 @@ const CustomImage = ({ source, style }) => {
   );
 };
 
-// 2. Komponen Utama (Layar Utama)
-export default function App() {
+export default function CustomImage() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Galeri Kegiatan Sekolah</Text>
 
       <View style={styles.galleryGrid}>
-        {/* Contoh Penggunaan CustomImage */}
         <CustomImage 
           source={{ uri: 'https://picsum.photos/id/1040/400/300' }} 
         />
@@ -50,7 +46,6 @@ export default function App() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -73,7 +68,7 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 10,
     overflow: 'hidden',
-    backgroundColor: '#e1e4e8', // Warna latar belakang placeholder sebelum gambar tampil
+    backgroundColor: '#e1e4e8', 
     marginBottom: 15,
     justifyContent: 'center',
     alignItems: 'center',
